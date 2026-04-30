@@ -1,0 +1,14 @@
+{
+  "name": "commerce_core",
+  "version": "1.0.0",
+  "description": "Multi-tenant headless commerce engine",
+  "scripts": {
+    "dev:backend": "cd backend && nodemon src/server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
